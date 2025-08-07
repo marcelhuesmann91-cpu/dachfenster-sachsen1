@@ -7,7 +7,7 @@
 
   <!-- Bootstrap CSS (Version 5) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="reviews.css">
   <!-- WhatsApp Button -->
   <a href="https://wa.me/4915123138079" target="_blank" style="
     position:fixed;
@@ -32,24 +32,16 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <svg width="80" height="50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo dachfenster-sachsen.de" class="me-2">
-        <rect width="80" height="50" fill="#222" rx="8" ry="8"/>
-        <polygon points="15,40 40,10 65,40" fill="#4CAF50" />
-        <rect x="30" y="25" width="20" height="15" fill="#A5D6A7" />
-      </svg>
-      <span class="fw-bold text-white">dachfenster-</span>
-      <span class="fw-bold" style="color:#4CAF50;">sachsen.de</span>
-    </a>
+<header class="bg-light py-5">
+  <div class="container text-center">
+    <h1 class="display-5 fw-bold">Ihr Experte für Dachfenster in Sachsen</h1>
+    <p class="lead">Fachgerechter Austausch, Montage &amp; Service – schnell, sauber und zuverlässig.</p>
   </div>
-</nav>
+</header>
 
 <!-- Einleitung -->
 <section class="container my-5">
   <div class="p-4 bg-light rounded shadow-sm">
-    <h2 class="mb-3">Ihr Partner für Dachfenster und fachgerechten Einbau</h2>
     <p>Ob Neubau oder Austausch – wir liefern und montieren Dachfenster in allen gängigen Maßen. Profitieren Sie von unserer professionellen Beratung und einem schnellen, sauberen Einbau.</p>
     <p>Wir arbeiten mit <strong>FAKRO</strong> zusammen. Vor Ort betreut Sie <strong>Alexander Krisch</strong> als Ansprechpartner in Sachsen.</p>
     <p>Unser Service: <strong>10 Jahre Garantie</strong> auf Montage + <strong>kostenfreie BAFA-Antragstellung</strong>.</p>
@@ -158,505 +150,75 @@
     </div>
   </div>
 </div>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRONMAT GmbH - Google Bewertungen</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 2rem;
-            color: #202124;
-        }
-
-        .reviews-widget {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .widget-header {
-            display: flex;
-            align-items: center;
-            padding: 24px;
-            border-bottom: 1px solid #e8eaed;
-        }
-
-        .company-logo {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #4a90e2, #7b68ee);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 16px;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .company-info h2 {
-            font-size: 20px;
-            font-weight: 500;
-            color: #202124;
-            margin-bottom: 4px;
-        }
-
-        .rating-overview {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .rating-score {
-            font-size: 16px;
-            font-weight: 500;
-            color: #202124;
-        }
-
-        .stars {
-            color: #fbbc04;
-            font-size: 16px;
-            margin: 0 4px;
-        }
-
-        .rating-text {
-            font-size: 14px;
-            color: #5f6368;
-        }
-
-        .powered-by {
-            margin-top: 8px;
-            font-size: 12px;
-            color: #5f6368;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .google-logo {
-            font-weight: bold;
-        }
-
-        .google-g { color: #4285f4; }
-        .google-o1 { color: #ea4335; }
-        .google-o2 { color: #fbbc05; }
-        .google-g2 { color: #4285f4; }
-        .google-l { color: #34a853; }
-        .google-e { color: #ea4335; }
-
-        .review-button {
-            background: #1a73e8;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 16px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 12px;
-            transition: background-color 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .review-button:hover {
-            background: #1557b0;
-        }
-
-        .reviews-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .reviews-slider {
-            display: flex;
-            transition: transform 0.5s ease;
-            padding: 0;
-        }
-
-        .review-slide {
-            min-width: 100%;
-            padding: 24px;
-            display: flex;
-            gap: 24px;
-        }
-
-        .review-card {
-            flex: 1;
-            min-width: 300px;
-            background: white;
-            border: 1px solid #e8eaed;
-            border-radius: 8px;
-            padding: 16px;
-            position: relative;
-        }
-
-        .review-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .reviewer-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 16px;
-            color: white;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .reviewer-info {
-            flex-grow: 1;
-        }
-
-        .reviewer-name {
-            font-size: 14px;
-            font-weight: 500;
-            color: #1a73e8;
-            margin-bottom: 2px;
-        }
-
-        .review-date {
-            font-size: 12px;
-            color: #5f6368;
-        }
-
-        .google-icon {
-            width: 16px;
-            height: 16px;
-            margin-left: 8px;
-            flex-shrink: 0;
-        }
-
-        .review-rating {
-            color: #fbbc04;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .review-text {
-            font-size: 14px;
-            color: #3c4043;
-            line-height: 1.4;
-        }
-
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: white;
-            border: 1px solid #dadce0;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .slider-nav:hover {
-            background: #f8f9fa;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .slider-nav.prev {
-            left: 16px;
-        }
-
-        .slider-nav.next {
-            right: 16px;
-        }
-
-        .slider-indicators {
-            display: flex;
-            justify-content: center;
-            padding: 16px;
-            gap: 8px;
-        }
-
-        .indicator {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #dadce0;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .indicator.active {
-            background: #1a73e8;
-        }
-
-        /* Avatar Colors */
-        .avatar-green { background: #34a853; }
-        .avatar-orange { background: #ff6d01; }
-        .avatar-teal { background: #00acc1; }
-        .avatar-purple { background: #9c27b0; }
-        .avatar-red { background: #d93025; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .review-slide {
-                flex-direction: column;
-            }
-
-            .review-card {
-                min-width: auto;
-            }
-
-            .widget-header {
-                padding: 16px;
-            }
-
-            .slider-nav {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="reviews-widget">
-        <div class="widget-header">
-            <div class="company-logo">K</div>
-            <div class="company-info">
-                <h2>KRONMAT GmbH</h2>
-                <div class="rating-overview">
-                    <span class="rating-score">4.9</span>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="rating-text">Basierend auf 332 Bewertungen</div>
-                <div class="powered-by">
-                    powered by
-                    <span class="google-logo">
-                        <span class="google-g">G</span><span class="google-o1">o</span><span class="google-o2">o</span><span class="google-g2">g</span><span class="google-l">l</span><span class="google-e">e</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="reviews-container">
-            <div class="reviews-slider" id="reviewsSlider">
-                <!-- Slide 1 -->
-                <div class="review-slide">
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar avatar-green">G</div>
-                            <div class="reviewer-info">
-                                <div class="reviewer-name">Gerhard Lenz</div>
-                                <div class="review-date">vor 7 Monaten</div>
-                            </div>
-                            <svg class="google-icon" viewBox="0 0 24 24" fill="#4285f4">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                        </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">Von Anfang bis Ende 6 von 5 Sternen. Preis ist gut, Bafa hat bezahlt, alle Gespräche waren sehr freundlich und kompetent.</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar avatar-orange">W</div>
-                            <div class="reviewer-info">
-                                <div class="reviewer-name">Wilfried Pedd</div>
-                                <div class="review-date">vor 8 Monaten</div>
-                            </div>
-                            <svg class="google-icon" viewBox="0 0 24 24" fill="#4285f4">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                        </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">Die Monteure haben fachkundig ihre Arbeit erledigt und den Arbeitsplatz sauber verlassen. Sie waren freundlich und hilfsbereit.</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar avatar-teal">W</div>
-                            <div class="reviewer-info">
-                                <div class="reviewer-name">Wolfgang Oster</div>
-                                <div class="review-date">vor 8 Monaten</div>
-                            </div>
-                            <svg class="google-icon" viewBox="0 0 24 24" fill="#4285f4">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                        </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">Nachdem ich mich im Internet umgeschaut und viele Angebote verglichen habe fiel die Entscheidung auf die Firma KRONMAT.</div>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="review-slide">
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar avatar-purple">M</div>
-                            <div class="reviewer-info">
-                                <div class="reviewer-name">Michael Braun</div>
-                                <div class="review-date">vor 9 Monaten</div>
-                            </div>
-                            <svg class="google-icon" viewBox="0 0 24 24" fill="#4285f4">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                        </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">Sehr professionelle Beratung und Ausführung. Das Team war pünktlich, freundlich und hat alles perfekt erklärt. Kann ich nur weiterempfehlen!</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar avatar-red">S</div>
-                            <div class="reviewer-info">
-                                <div class="reviewer-name">Sabine Fischer</div>
-                                <div class="review-date">vor 10 Monaten</div>
-                            </div>
-                            <svg class="google-icon" viewBox="0 0 24 24" fill="#4285f4">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                        </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">Kompetente Beratung von Anfang an. Preis-Leistung stimmt absolut. Gerne wieder!</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar avatar-green">T</div>
-                            <div class="reviewer-info">
-                                <div class="reviewer-name">Thomas Klein</div>
-                                <div class="review-date">vor 11 Monaten</div>
-                            </div>
-                            <svg class="google-icon" viewBox="0 0 24 24" fill="#4285f4">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                            </svg>
-                        </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">Zuverlässiges Unternehmen. Termintreue, faire Preise und top Qualität. Alles wurde sauber hinterlassen.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="slider-nav prev" onclick="previousSlide()">‹</div>
-            <div class="slider-nav next" onclick="nextSlide()">›</div>
-        </div>
-
-        <!-- Indicators -->
-        <div class="slider-indicators">
-            <div class="indicator active" onclick="goToSlide(0)"></div>
-            <div class="indicator" onclick="goToSlide(1)"></div>
-        </div>
-    </div>
-
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 2;
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        }
-
-        function previousSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlider();
-        }
-
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            updateSlider();
-        }
-
-        function updateSlider() {
-            const slider = document.getElementById('reviewsSlider');
-            const indicators = document.querySelectorAll('.indicator');
-
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function openGoogleReview() {
-            // Hier würden Sie den echten Google Review Link einfügen
-            window.open('https://g.page/r/IHRE_GOOGLE_PLACE_ID/review', '_blank');
-        }
-
-        // Auto-slide alle 8 Sekunden
-        setInterval(nextSlide, 8000);
-
-        // Touch/Swipe Support für mobile Geräte
-        let startX = 0;
-        let endX = 0;
-
-        document.querySelector('.reviews-container').addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        document.querySelector('.reviews-container').addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = startX - endX;
-
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    previousSlide();
-                }
-            }
-        }
-    </script>
-</body>
-</html>
-
+<div class="reviews-widget">
+<div class="widget-header">
+<div class="company-logo">K</div>
+<div class="company-info">
+<h2>KRONMAT GmbH</h2>
+<div class="rating-overview">
+<span class="rating-score">4.9</span>
+<div class="stars">★★★★★</div>
+</div>
+<div class="rating-text">Basierend auf 332 Bewertungen</div>
+<div class="powered-by">powered by <span class="google-logo"><span class="google-g">G</span><span class="google-o1">o</span><span class="google-o2">o</span><span class="google-g2">g</span><span class="google-l">l</span><span class="google-e">e</span></span></div>
+<button class="review-button" onclick="window.open('https://maps.app.goo.gl/SbY5JV51LaPoL4rQz','_blank')">bewerte uns auf G</button>
+</div>
+</div>
+<div class="reviews-container">
+<div class="reviews-slider" id="slider">
+<div class="review-slide">
+<div class="review-card">
+<div class="review-header"><div class="reviewer-avatar avatar-green">G</div><div class="reviewer-info"><div class="reviewer-name">Gerhard Lenz</div><div class="review-date">vor 7 Monaten</div></div><div class="google-icon">G</div></div>
+<div class="review-rating">★★★★★</div>
+<div class="review-text">Von Anfang bis Ende 6 von 5 Sternen. Preis ist gut, Bafa hat bezahlt, alle Gespräche waren sehr freundlich und kompetent.</div>
+</div>
+<div class="review-card">
+<div class="review-header"><div class="reviewer-avatar avatar-orange">W</div><div class="reviewer-info"><div class="reviewer-name">Wilfried Pedd</div><div class="review-date">vor 8 Monaten</div></div><div class="google-icon">G</div></div>
+<div class="review-rating">★★★★★</div>
+<div class="review-text">Die Monteure haben fachkundig ihre Arbeit erledigt und den Arbeitsplatz sauber verlassen. Sie waren freundlich und hilfsbereit.</div>
+</div>
+<div class="review-card">
+<div class="review-header"><div class="reviewer-avatar avatar-teal">W</div><div class="reviewer-info"><div class="reviewer-name">Wolfgang Oster</div><div class="review-date">vor 8 Monaten</div></div><div class="google-icon">G</div></div>
+<div class="review-rating">★★★★★</div>
+<div class="review-text">Nachdem ich mich im Internet umgeschaut und viele Angebote verglichen habe fiel die Entscheidung auf die Firma KRONMAT.</div>
+</div>
+</div>
+<div class="review-slide">
+<div class="review-card">
+<div class="review-header"><div class="reviewer-avatar avatar-purple">M</div><div class="reviewer-info"><div class="reviewer-name">Michael Braun</div><div class="review-date">vor 9 Monaten</div></div><div class="google-icon">G</div></div>
+<div class="review-rating">★★★★★</div>
+<div class="review-text">Sehr professionelle Beratung und Ausführung. Das Team war pünktlich, freundlich und hat alles perfekt erklärt. Kann ich nur weiterempfehlen!</div>
+</div>
+<div class="review-card">
+<div class="review-header"><div class="reviewer-avatar avatar-red">S</div><div class="reviewer-info"><div class="reviewer-name">Sabine Fischer</div><div class="review-date">vor 10 Monaten</div></div><div class="google-icon">G</div></div>
+<div class="review-rating">★★★★★</div>
+<div class="review-text">Kompetente Beratung von Anfang an. Preis-Leistung stimmt absolut. Gerne wieder!</div>
+</div>
+<div class="review-card">
+<div class="review-header"><div class="reviewer-avatar avatar-green">T</div><div class="reviewer-info"><div class="reviewer-name">Thomas Klein</div><div class="review-date">vor 11 Monaten</div></div><div class="google-icon">G</div></div>
+<div class="review-rating">★★★★★</div>
+<div class="review-text">Zuverlässiges Unternehmen. Termintreue, faire Preise und top Qualität. Alles wurde sauber hinterlassen.</div>
+</div>
+</div>
+</div>
+<div class="slider-nav prev" onclick="s(-1)">‹</div>
+<div class="slider-nav next" onclick="s(1)">›</div>
+</div>
+<div class="slider-indicators">
+<div class="indicator active" onclick="g(0)"></div>
+<div class="indicator" onclick="g(1)"></div>
+</div>
+</div>
+<script>
+let c=0,t=2;
+function s(d){c=(c+d+t)%t;u();}
+function g(i){c=i;u();}
+function u(){document.getElementById('slider').style.transform=`translateX(-${c*100}%)`;document.querySelectorAll('.indicator').forEach((e,i)=>e.classList.toggle('active',i===c));}
+setInterval(()=>s(1),8000);
+let x1=0,x2=0;
+document.querySelector('.reviews-container').addEventListener('touchstart',e=>x1=e.touches[0].clientX);
+document.querySelector('.reviews-container').addEventListener('touchend',e=>{x2=e.changedTouches[0].clientX;Math.abs(x1-x2)>50&&s(x1>x2?1:-1);});
+</script>
 <!-- Kontakt -->
 <section id="kontakt" class="py-5 bg-light">
   <div class="container">
